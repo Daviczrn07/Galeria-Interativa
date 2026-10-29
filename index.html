@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria Interativa - Ben 10</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+     <header>
+        <h1>Hora do Herói!</h1>
+        <p>Uma seleção de 9 imagens impressionantes de Ben Tennyson e seus alienígenas.</p>
+    </header>
+
+    <!-- FILTROS -->
+    <nav class="filtros">
+        
+        <button 
+        class="filtro ativo" 
+        data-filtro="todas">
+        Todas
+        </button>
+
+        <button 
+        class="filtro"
+        data-filtro="classico">
+            Classico
+        </button>
+
+        <button 
+        class="filtro"
+        data-filtro="forcaAlienigena">
+            Força Alienigena
+        </button>
+
+        <button 
+        class="filtro"
+        data-filtro="omniverse">
+            Omniverse
+        </button>
+    </nav>
+    
+    <p id="totalImagens" class="total"></p>
+
+    <!-- Galeria -->
+
+    <main class="galeria" id="galeria">
+            <img src="img/Foto1.png" 
+            alt="Blox" class="miniatura destaque" 
+            data-categoria="omniverse"
+            data-descricao="Segmentasapien feito de blocos de construção encaixáveis. Consegue esticar-se, reconstituir-se e transformar-se em estruturas gigantes." 
+            data-local="Polyhex" 
+            tabindex="0">
+           
+            <img src="img/Foto2.png"
+            alt="Chama" 
+            class="miniatura horizontal"
+            data-categoria="classico" 
+            data-descricao="Alienígena de fogo plasma do planeta Pyros. Capaz de gerar e controlar chamas intensas e disparar bolas de fogo." 
+            data-local="Pyros"
+            tabindex="0">
+           
+            <img src="img/Foto3.png" 
+            alt="Diamante" class="miniatura" 
+            data-categoria="classico"
+            data-descricao="Corpo formado por cristais extremamente resistentes capazes de refletir disparos de energia." 
+            data-local="Petropia" 
+            tabindex="0">
+           
+            <img src="img/Foto4.png" 
+            alt="Feedback" 
+            class="miniatura vertical" 
+            data-categoria="omniverse"
+            data-descricao="Conductoid capaz de absorver qualquer tipo de energia através das suas antenas e cauda, devolvendo-a em poderosos disparos elétricos." 
+            data-local="Teslavorr"
+            tabindex="0">
+           
+            <img src="img/Foto5.png" 
+            alt="Friagem" 
+            class="miniatura" 
+            data-categoria="forcaAlienigena"
+            data-descricao="Necrofriggian com capacidades de voo, intangibilidade e sopro congelante. Pode atravessar matéria sólida congelando tudo ao seu passo." 
+            data-local="Kylmyys"
+            tabindex="0">
+           
+            <img src="img/Foto6.png" 
+            alt="Gravattack" 
+            class="miniatura horizontal" 
+            data-categoria="omniverse"
+            data-descricao="Galilean que funciona como um pequeno planeta vivo. Consegue manipular a gravidade ao seu redor, fazendo objetos e inimigos flutuarem ou colidirem." 
+            data-local="Keplorr"
+            tabindex="0">
+           
+            <img src="img/Foto7.png" 
+            alt="Enormossauro" 
+            class="miniatura" 
+            data-categoria="forcaAlienigena"
+            data-descricao="Vaxasauriano humanoide gigante com força colossal. Consegue aumentar o seu tamanho e massa corporal até cerca de 18 metros de altura." 
+            data-local="Terradino" 
+            tabindex="0">
+           
+            <img src="img/Foto8.png" 
+            alt="Rath" class="miniatura" 
+            data-categoria="forcaAlienigena"
+            data-descricao="Appoplexiano focado em combate corpo a corpo e puro impulso agressivo. Possui garras retráteis nas mãos e uma resistência física formidável." 
+            data-local="Appoplexia" 
+            tabindex="0">
+           
+            <img src="img/Foto9.png" 
+            alt="XLR8" class="miniatura horizontal"
+            data-categoria="classico"
+            data-descricao="Kinecelerano hiperveloz que se desloca sobre esferas nas patas. Atinge velocidades superiores a 800 km/h com reflexos instantâneos." 
+            data-local="Kinet" 
+            tabindex="0">
+    </main>
+
+    <!-- MODAL -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true" aria-label="Visualizador de imagens" aria-hidden="true">
+        <button id="fechar" class="fechar" aria-label="Fechar imagem">&times;</button>
+
+        <button id="anterior" class="navegacao anterior" aria-label="Imagem anterior">&#10094;</button>
+
+        <div class="modal-conteudo">
+            <img src="" alt="Imagem ampliada" id="imagemModal">
+            <div class="legenda">
+                <div class="legenda-topo">
+                    <span id="contador"></span>
+                    <span id="categoriaModal" class="badge-categoria"></span>
+                </div>
+                <h2 id="nomeImagem"></h2>
+                <p id="descricaoModal" class="descricao"></p>
+                <p id="localModal" class="local"></p>
+            </div>
+        </div>
+
+        <button id="proximo" class="navegacao proximo" aria-label="Próxima imagem">&#10095;</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
